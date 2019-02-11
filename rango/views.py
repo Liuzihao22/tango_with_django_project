@@ -15,6 +15,7 @@ from django.contrib.auth import logout
 from datetime import datetime
 
 
+
 def index(request):
     # category_list = Category.objects.order_by('-likes')[:5]
     # context_dict = {'categories':category_list}
@@ -178,3 +179,4 @@ def visitor_cookie_handler(request):
         request.session['last_visit'] = last_visits_cookie
     request.session['visits'] = visits
     context_dict['visits'] = request.session['visits']
+    
